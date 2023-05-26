@@ -2,6 +2,8 @@ import React from 'react'
 import { useContext } from 'react';
 import {context} from '@/context';
 
+import AdminNavbar from '@/Components/AdminNavbar';
+
 export default function Accueil() {
 
     const {authState, logout} = useContext(context);
@@ -11,13 +13,36 @@ export default function Accueil() {
 
   return (
     <div>
-        <p> {JSON.stringify(authState)}</p>
-
+        {/* <p> {JSON.stringify(authState)}</p>
         {(authState != null) && (authState.isAuth) && <h1>Bienvenu {authState.admin.nomUtilisateur} !</h1>}
+        <button onClick={handleLogout}>logout</button> */}
 
+        <AdminNavbar/>
+        <div className='admin-accueil'>
 
+            <div className='admin-header'>
+                <h1> <b> Bienvenu Ya Aniss</b></h1>
+                <p>Administrateur de la région : <b>WILAYA</b> </p>
+            </div>
 
-        <button onClick={handleLogout}>logout</button>
+            <div className='admin-menu'>
+
+                <div className='admin-list'>
+                    <ul>
+                        <li>Demandes d'ajout</li>
+                        <li>lieux touristiques</li>
+                        <li>Responsables de lieu</li>
+                        <li>Tableau de bord</li>
+                    </ul>
+                </div>
+
+                <div className='admin-map'>
+                    map
+                </div>
+
+            </div>
+
+        </div>
     </div>
     )
 }

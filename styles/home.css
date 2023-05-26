@@ -60,4 +60,26 @@
 .map-container {
     height: 100vh;
     width: 100vw;
+    z-index: -0;
+}
+.info {
+    background-color: blueviolet;
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    z-index: 9999;
+}
+.sliding-div {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 33vw;
+    height: 100%; 
+    background-color: #ffffff;
+    transition: left 0.5s ease;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
   }
+  
+.slide-in {
+   left: 0;
+}
