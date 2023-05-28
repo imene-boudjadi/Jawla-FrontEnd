@@ -34,6 +34,7 @@
     border-radius: 50px;
     min-width: 80px;
     text-align: center;
+    
 
 
 }
@@ -56,24 +57,29 @@
     align-items: center;
     justify-content: center;
     margin-top: 5vh;
+
+    transition: left 10s ease;
 }
 .map-container {
     height: 100vh;
     width: 100vw;
     z-index: -0;
 }
-.info {
-    background-color: blueviolet;
-    height: 500px;
-    width: 800px;
-    margin: auto;
-    z-index: 9999;
+.loading {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 }
 .sliding-div {
     position: absolute;
     top: 0;
     left: -100%;
-    width: 33vw;
+    width: 40vw;
     height: 100%; 
     background-color: #ffffff;
     transition: left 0.5s ease;
@@ -82,4 +88,7 @@
   
 .slide-in {
    left: 0;
+}
+.slide-inn {
+    left : 20vw;
 }

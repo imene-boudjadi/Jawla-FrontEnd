@@ -12,16 +12,16 @@ export default function Accueil() {
     }
 
   return (
-    <div>
+    <div className="admin-page">
         {/* <p> {JSON.stringify(authState)}</p>
         {(authState != null) && (authState.isAuth) && <h1>Bienvenu {authState.admin.nomUtilisateur} !</h1>}
         <button onClick={handleLogout}>logout</button> */}
 
-        <AdminNavbar/>
+        <AdminNavbar logout={logout} />
         <div className='admin-accueil'>
 
             <div className='admin-header'>
-                <h1> <b> Bienvenu Ya Aniss</b></h1>
+                <h1> <b> Bienvenu Ya {authState?.admin?.nom}</b></h1>
                 <p>Administrateur de la région : <b>WILAYA</b> </p>
             </div>
 
