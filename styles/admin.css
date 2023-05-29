@@ -1,0 +1,75 @@
+.admin-navbar {
+    width: 100vw;
+    height: 12vh;
+    background-color: #00BFA4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding:  0 7%;
+}
+.admin-btn-logout {
+    background-color: white;
+    color: red;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.admin-btn-logout:hover {
+    background-color: red;
+    color: white;
+}
+.admin-header {
+    height: 3vh;
+    width: 100vw;
+    text-align: center;
+    margin-top: 3%;
+
+    font-size:25px;
+}
+.admin-header p {
+    font-size:17px;
+}
+.admin-menu {
+    display: flex;  
+   height: 80vh;
+    padding: 10% 7% ;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.admin-list {
+    flex-basis: 30%;
+    
+    
+
+}
+.admin-list li {
+    border: 2px solid #00BFA4;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.admin-list li:hover {
+    background-color: #00BFA4;
+    color: white;
+
+}
+.admin-map {
+    flex-basis: 60%;
+    height: 40vh;
+    background-color: #00BFA4;
+    text-align: center;
+}
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
