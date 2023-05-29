@@ -1,0 +1,139 @@
+.container {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: repeat(6, 1fr);
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.descriptionDiv {
+  flex-basis: 40%;
+  grid-column: 1 / span 2;
+}
+
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.categoryIcon {
+  margin-right: 5%;
+}
+
+.buttonsDiv {
+  margin-top: 2%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonsDiv button {
+  display: block;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  font-family: "Poppins";
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* semibold */
+  width: 100%;
+  border: none;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.buttonsDiv button:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttonsDiv button:active {
+  background-color: #a3fff3;
+}
+.questionDiv {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 5 / span 6;
+}
+
+.questionNumber {
+  margin-left: auto;
+  border-radius: 100px;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* semibold */
+  background-color: #00BFA4;
+  padding: 3% 4% 2% 4%;
+  color: #FFFFFF;
+}
+
+.title {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* semibold */
+}
+
+.question{
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.paragraphDescription {
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 400;
+  /* regular */
+}
+
+.nextButton{
+  border: none;
+  fill: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: auto;
+  position: absolute;
+  right: 0;
+  margin-right: 7%;
+  margin-top: 1%;
+  color: #DD7121;
+}
+
+.next{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #EAF0CE;
+}
+
+.hawass{
+  position: relative;
+  width: 100%;
+}
+
+.hawassImage{
+  position: absolute;
+  width: 100%;
+  transform: translate(115%,150%);
+}
+
+.coloredDiv{
+  background-color: #EAF0CE;
+  margin-top: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  border-radius: 5%;
+}
+
+/*the hawass absolute trick works on min 800px screens*/

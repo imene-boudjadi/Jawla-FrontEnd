@@ -6,6 +6,8 @@ import { GoogleMapProvider, useAutocomplete, useGoogleMap} from "@ubilabs/google
 import park from '../public/park.png'
 import axios from "axios";
 
+import SiteDetails from "./SiteDetails";
+
 
 
 import Loading from "./Loading";
@@ -163,25 +165,17 @@ function Map() {
       <GoogleMap zoom={10} center={center} mapContainerClassName="map-container" options={options}>
         <MarkerF position={center}  onClick={() => handleMarkerClick(center)}>
         </MarkerF>
-        {lieux?.map((point)=>{
+        {points?.map((point)=>{
           const pos = {lat : parseFloat(point.latitude), lng : parseFloat(point.longitude)}
           return (
             <div key={point.idPointInteret}>
               <MarkerF position={pos} onClick={() => handleMarkerClick(point)} options={markerOptions}/>
-              <InfoWindow position={pos} options={optionss}>
-                <div dangerouslySetInnerHTML={{ __html: content }} />
-              </InfoWindow>
             </div>
           )
         })}
         <div className={`sliding-div ${isAnimating ? 'slide-in' : ''}`}>
           <button onClick={closeDiv}>fermer</button>
-          Rani nestena t'codi cette partie
-          {lieu?.titre}
-          <br />
-          {lieu?.description}
-          {}
-
+         <SiteDetails/>
         </div>
       </GoogleMap>
       
