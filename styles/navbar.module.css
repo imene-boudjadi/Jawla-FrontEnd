@@ -8,6 +8,11 @@
     max-width: 100%;
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    z-index: 11111;
+    width: 100vw;
+    background-color: white;
 }
 
 

@@ -11,14 +11,15 @@
     outline: none;
 }
 .home-barreDeRecherche-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
     background-color: #ffffff; 
-    justify-content: space-between;
+   
+    align-items: center;
+    display: flex;
     padding: 0 15px;
     border-radius: 10px;
     width: 100%;
+    height: 40px;
 }
 .home-filtre-container {
     display: flex;
@@ -44,7 +45,7 @@
     width : 30vw;
     height: 17vh;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 .h-container{
@@ -56,9 +57,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 12vh;
 
-    transition: left 10s ease;
+    transition: left 1s ease;
 }
 .map-container {
     height: 100vh;
@@ -67,7 +68,7 @@
 }
 .loading {
     background-color: white;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 
     display: flex;
@@ -84,6 +85,7 @@
     background-color: #ffffff;
     transition: left 0.5s ease;
     filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+    z-index: 9999999;
   }
   
 .slide-in {
@@ -91,4 +93,74 @@
 }
 .slide-inn {
     left : 20vw;
+}
+
+.marker:hover {
+    height: 150px;
+    width: 150px;
+}
+
+.commentaire-post {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 3.7%;
+    border-radius: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.starRating {
+    font-size: 30px;
+    color:goldenrod;
+}
+.commentaire-input {
+    width: 75%;
+    height: 0%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #F3F3F3;
+}
+.btn-soumettre-commentaire {
+    background-color: #00BFA4;
+    color: white;
+    border-radius: 5px; 
+    width: 20%;  
+    text-align: center;
+    transition: transform 0.2s;
+}
+.btn-soumettre-commentaire:active {
+    /* Styles de l'animation lorsqu'on appuie sur le bouton */
+    transform: scale(0.95);
+  }
+  
+.btn-soumettre-commentaire:hover {
+    /* Styles de l'animation au survol du bouton */
+    transform: scale(1.05);
+  }
+.comm-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+.favoris {
+    margin-top: 80px;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.favoris-liste {
+    overflow:scroll;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+}
+.card {
+    margin: 2%;
+}
+.slido {
+    position: absolute;
+    z-index: 89999999999999999;
+    
+    top : 0px;
+}
+.autocomplete {
+    background-color: white;
+    border-radius: 4px;
 }

@@ -60,54 +60,9 @@ const SiteDetails = ({lieu}) => {
     const HawassClick = () => {
         setHawassClicked(!HawassClicked);
     }
-    const handleButtonClick = (buttonId) => {
-        switch (buttonId) {
-            case 'transport':
-                setInfoDisplayed('site.transport');
-                setButtonClicked('transport');
-                break;
-            case 'respo':
-                setInfoDisplayed('site.respo');
-                setButtonClicked('respo');
-                break;
-            case 'contact':
-                setInfoDisplayed('site.contact');
-                setButtonClicked('contact');
+    
 
-                break;
-            case 'website':
-                setInfoDisplayed('site.website');
-                setButtonClicked('website');
-
-                break;
-            case 'localisation':
-                setInfoDisplayed('site.localisation');
-                setButtonClicked('localisation');
-
-                break;
-            default:
-                setInfoDisplayed('selectionner une icone pour avoir des informations');
-                setButtonClicked('contact');
-
-                break;
-        }
-    };
-    const updatedImages = images.map((image, index) => ({
-        id: index,
-        url: image,
-    }));
-
-    const { carouselFragment, thumbsFragment, slideToPrevItem, slideToNextItem, slideToItem } = useSpringCarousel({
-        withLoop: true,
-        withThumbs: true,
-        itemsPerSlide: 1,
-        slideAmount: 375,
-        freeScroll: false,
-        items: updatedImages.map((image) => ({
-            renderItem: <img className={styles.siteImage} src={image.url} alt="share" />,
-            renderThumb: <button onClick={() => slideToItem(image.id)} ><img className={styles.siteImage} src={image.url} alt="share" /></button>,
-        }))
-    })
+    
 
 
     const like = async () => {
@@ -123,24 +78,7 @@ const SiteDetails = ({lieu}) => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.nameContainer}>
-            </div>
-            <div className={styles.siteDescription}>
-                <h1 className={styles.subtitles}>Description</h1>
-                <p className={styles.plainText}>{lieu?.description}</p>
-            </div>
-            <div className={styles.imageSliderContainer}>
-                <button className={styles.nextPrevButton} onClick={slideToPrevItem}>
-                    <img className={styles.Icon} src="https://i.ibb.co/NWHCfTg/left.png" alt="prev" />
-                </button>
-                <div className={styles.slider}>
-                    {carouselFragment}
-                </div>
-                <button className={styles.nextPrevButton} onClick={slideToNextItem}>
-                    <img className={styles.Icon} src="https://i.ibb.co/hHdrq0s/right.png" alt="next" />
-                </button>
-            </div>
-            <div className={styles.thumbSliderContainer}>{thumbsFragment}</div>
+            
             
             {/* <div className={styles.siteInformation}>
                 <h1 className={styles.subtitles}>Informations</h1>
