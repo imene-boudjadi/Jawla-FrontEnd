@@ -1,11 +1,14 @@
 .container {
-    width: 40vw;
+    width: 100%;
     margin-top: 2%;
-    padding-left: 2%;
+    padding-left: 3%;
     padding-right: 2%;
     font-family: poppins, 'sans-serif';
 
     overflow: scroll;
+    height: 95vh;
+
+    overflow-x: hidden;
 
 }
 
@@ -128,14 +131,19 @@
 .subtitles{
     font-size: 3vh;
     font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 .subsubtitles{
     font-size: 2.5vh;
     font-weight: 600;
+    
 }
 .plainText{
     font-size: 2.3vh;
     font-weight: 400;
+    margin-top: 2px;
+    margin-bottom: 15px;
 }
 
 .iconDetails{
